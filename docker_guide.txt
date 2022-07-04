@@ -1,0 +1,26 @@
+docker images
+
+docker image build -t flask_docker .
+docker run -p 5000:5000 -d flask_docker
+docker container ls
+
+docker ps
+docker stop "container id"
+docker container prune
+
+docker stop $(docker images | grep 'dockername')
+docker rmi $(docker images | grep 'dockername')
+
+Stop all dockers
+docker stop $(docker ps -a -q)
+Remove all
+docker rm $(docker ps -a -q)
+
+force stop docker
+sudo systemctl stop docker
+sudo systemctl stop docker.socket
+
+Restart docker service
+sudo dockerd
+sudo systemctl start docker
+sudo systemctl restart docker
