@@ -24,3 +24,8 @@ Restart docker service
 sudo dockerd
 sudo systemctl start docker
 sudo systemctl restart docker
+
+
+docker login
+docker tag flask_docker humblesami/docker-repository-name
+docker push humblesami/docker-repository-name
